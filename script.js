@@ -348,3 +348,41 @@ window.addEventListener('load', function() {
                 }, index * 200 + 500);
             });
         });
+
+  function adjustTimelineHeight() {
+    const timelineContainers = document.querySelectorAll('.timeline-container');
+    
+    timelineContainers.forEach(container => {
+        const timelineItems = container.querySelectorAll('.timeline-item');
+        const timelineLine = container.querySelector('.timeline-line');
+        
+        if (timelineItems.length > 0 && timelineLine) {
+          
+            let totalHeight = 0;
+            
+            timelineItems.forEach((item, index) => {
+                const itemHeight = item.offsetHeight;
+                const marginBottom = parseInt(window.getComputedStyle(item).marginBottom);
+                totalHeight += itemHeight + marginBottom;
+            });
+            
+            totalHeight += 20;
+        
+            timelineLine.style.height = totalHeight + 'px';
+            timelineLine.style.minHeight = totalHeight + 'px';
+        }
+    });
+}
+
+function animateSkillBars() {
+  const skillFills = document.querySelectorAll('.skill-fill');
+  
+  skillFills.forEach((fill, index) => {
+    const width = fill.getAttribute('data-width');
+    
+    setTimeout(() => {
+      fill.style.width = width;
+      fill.classList.add('animate');
+    }, index * 300);
+  });
+}

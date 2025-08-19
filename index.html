@@ -17,21 +17,21 @@
       <h2>Magesh kumar</h2>
       <p>Senior Analyst (Team Lead)</p>
       <div class="social-links">
-        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn" /></a>
+        <a href="#"><img src="assets/linkedin.svg" alt="LinkedIn" /></a>
         <a href="#"><img src="assets/instagram.svg" alt="Instagram" /></a>
-        <a href="#"><img src="assets/facebook.svg" alt="Facebook" /></a>
-        <a href="#"><img src="assets/x.png" alt="Twitter" /></a>
+        <a href="#"><img src="assets/fb.svg" alt="Facebook" /></a>
+        <a href="#"><img src="assets/twitter'.svg" alt="Twitter" /></a>
       </div>
     </div>
 
     <hr class="divider" />
 
     <nav class="navigation">
-      <a class="active"><i class="ri-information-line"></i><span>About</span></a>
-      <a><i class="ri-file-list-2-line"></i><span>Resume</span></a>
-      <a><i class="ri-briefcase-line"></i><span>Portfolio</span></a>
-      <a><i class="ri-article-line"></i><span>Blog</span></a>
-      <a><i class="ri-contacts-book-line"></i><span>Contact</span></a>
+      <a class="nav-link active" data-page="about"><i class="ri-information-line"></i><span>About</span></a>
+      <a class="nav-link" data-page="resume"><i class="ri-file-list-2-line"></i><span>Resume</span></a>
+      <a class="nav-link" data-page="portfolio"><i class="ri-briefcase-line"></i><span>Portfolio</span></a>
+      <a class="nav-link" data-page="blog"><i class="ri-article-line"></i><span>Blog</span></a>
+      <a class="nav-link" data-page="contact"><i class="ri-contacts-book-line"></i><span>Contact</span></a>
     </nav>
 
     <hr class="divider" />
@@ -80,153 +80,475 @@
   </aside>
 
   <main class="main-content">
-    <section class="intro">
-      <p class="freelance">Hi, I'm a Freelance</p>
-      <h1 class="title">WEB DESIGNER</h1>
-      <p class="description">
-        To work in a professionally managed Organization which will offer continuous learning, challenges,
-        and responsible position I am looking <br>forward to an opportunity where I can utilize my skills in 
-        constituting effectively to the success of the organization and further improvement of my personal skills.
-        <br />
-        My aim is to help businesses achieve their goals with high-quality websites, e-commerce solutions, and customized IT services 
-        tailored to client needs.<br> I have collaborated with various startups and individuals, creating solutions that are both functional 
-        and visually appealing.
-      </p>
-      <div class="buttons">
-        <button>View Portfolio</button>
-        <button class="outline">View Resume</button>
+
+    <!-- ABOUT PAGE -->
+    <section id="about" class="page-section active">
+      <div class="intro">
+        <p class="freelance">Hi, I'm a Freelance</p>
+        <h1 class="title">WEB DESIGNER</h1>
+        <p class="description">
+          To work in a professionally managed Organization which will offer continuous learning, challenges,
+          and responsible position I am looking forward  <br/>to an opportunity where I can utilize my skills in 
+          constituting effectively to the success of the organization and further improvement of<br/> my personal skills.
+          <br/>
+          My aim is to help businesses achieve their goals with high-quality websites, e-commerce solutions, and customized IT services 
+          tailored to client needs. <br/>I have collaborated with various startups and individuals, creating solutions that are both functional 
+          and visually appealing.
+        </p>
+        <div class="buttons">
+          <button onclick="showPage('portfolio')">View Portfolio</button>
+          <button class="outline" onclick="showPage('resume')">View Resume</button>
+        </div>
       </div>
+  
+      <section class="services-section">
+        <h1>What I'm Do ?</h1>
+        <div class="services-scroll-container">
+          <div class="services-grid" id="servicesGrid">
+            <div class="service-card">
+              <div class="icon-title-row">
+                <img src="assets/code.png" alt="Web Design Icon" class="service-icon" />
+                <h3>Web Development</h3>
+              </div>
+              <p class="service-description">
+                The most modern and high-quality design made at a professional level.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <div class="icon-title-row">
+                <img src="assets/design.png" alt="Web Development Icon" class="service-icon" />
+                <h3>Web Design</h3>
+              </div>
+              <p class="service-description">
+                High-quality development of sites at the professional level.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <div class="icon-title-row">
+                <img src="assets/app-development.png" alt="Mobile App Icon" class="service-icon" />
+                <h3>Mobile Apps</h3>
+              </div>
+              <p class="service-description">
+                Professional development of applications for iOS and Android.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <div class="icon-title-row">
+                <img src="assets/consulting.png" alt="Consulting Icon" class="service-icon" />
+                <h3>Consulting Services</h3>
+              </div>
+              <p class="service-description">
+                Guiding startups and businesses to achieve operational excellence and IT efficiency.
+              </p>
+            </div>
+          </div>
+
+          <div class="services-scroll-indicator" id="servicesScrollIndicator">
+            <div class="services-scroll-thumb" id="servicesScrollThumb"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonials-scroll-container">
+          <div class="testimonial-container" id="testimonialsContainer">
+            <div class="testimonial-item">
+              <div class="name-badge">
+                <h3>Hari Krishnan</h3>
+                <p>Developer</p>
+              </div>
+              <div class="avatar">
+                <img src="assets/profile.png.png" alt="Hari Krishnan" />
+              </div>
+              <div class="testimonial-content">
+                <div class="stars">★★★★★</div>
+                <p class="feedback">
+                  Magesh Kumar was brought on board to develop our corporate identity, and we couldn't be happier with the outcome. He has extensive experience and is always attentive to the client's needs, ensuring everything aligns perfectly with our vision.
+                </p>
+              </div>
+            </div>
+
+            <div class="testimonial-item">
+              <div class="name-badge">
+                <h3>Hari Krishnan</h3>
+                <p>Developer</p>
+              </div>
+              <div class="avatar">
+                <img src="assets/profile.png.png" alt="Priya Sharma" />
+              </div>
+              <div class="testimonial-content">
+                <div class="stars">★★★★★</div>
+                <p class="feedback">
+                  Magesh Kumar was brought on board to develop our corporate identity, and we couldn't be happier with the outcome. He has extensive experience and is always attentive to the client's needs, ensuring everything aligns perfectly with our vision.
+                </p>
+              </div>
+            </div>
+
+            <div class="testimonial-item">
+              <div class="name-badge">
+                <h3>Hari Krishnan</h3>
+                <p>Developer</p>
+              </div>
+              <div class="avatar">
+                <img src="assets/profile.png.png" alt="Rajesh Kumar" />
+              </div>
+              <div class="testimonial-content">
+                <div class="stars">★★★★★</div>
+                <p class="feedback">
+                  Magesh Kumar was brought on board to develop our corporate identity, and we couldn't be happier with the outcome. He has extensive experience and is always attentive to the client's needs, ensuring everything aligns perfectly with our vision.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials-scroll-indicator" id="testimonialsScrollIndicator">
+            <div class="testimonials-scroll-thumb" id="testimonialsScrollThumb"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trusted-by">
+        <h2>Testimonials</h2>
+        <div class="trusted-logos">
+          <div class="trusted-logo"><img src="assets/google.png" alt="Google"></div>
+          <div class="trusted-logo"><img src="assets/microsoft.png" alt="Microsoft"></div>
+          <div class="trusted-logo"><img src="assets/samsung.webp" alt="Samsung"></div>
+          <div class="trusted-logo"><img src="assets/p&g.png" alt="P&G"></div>
+        </div>
+      </section>
     </section>
+    
 
-
-<section class="services-section">
-  <h1>What I'm Do ?</h1>
-  <div class="services-scroll-container">
-    <div class="services-grid" id="servicesGrid">
-      <div class="service-card">
-        <div class="icon-title-row">
-          <img src="assets/design.png" alt="Web Design Icon" class="service-icon" />
-          <h3>Web Design</h3>
+    <!-- RESUME PAGE -->
+    <section id="resume" class="page-section">
+    <h1 class="resume-header">Resume</h1>
+    
+    <!-- Education Section -->
+    <div class="resume-section">
+        <div class="section-title">
+            <i class="ri-graduation-cap-fill"></i>
+            <span>EDUCATION</span>
         </div>
-        <p class="service-description">
-          The most modern and high-quality design made at a professional level.
-        </p>
+        
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="institution">University of Madras</div>
+                    <div class="duration">2018 — 2021</div>
+                    <div class="degree">Bachelor of Commerce (BCM) from University of Madras with 63% in the year 2015.</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="institution">HSC from Tamil Nadu</div>
+                    <div class="duration">2022 — 2024</div>
+                    <div class="degree">HSC from Tamil Nadu with 70% in the year 2012</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="resume-section">
+        <div class="section-title">
+            <i class="ri-briefcase-fill"></i>
+            <span>EXPERIENCE</span>
+        </div>
+        
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="company">ACCENTURE EXPERIENCE</div>
+                    <div class="duration">2024 — present</div>
+                    <div class="job-description">
+                        Managed a team of 14 for Accenture's new project. Conducted process-related training for my span. Attended Blue Print session with client process. Preparing Documents and SOP for the new process.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="company">HTC GLOBAL SERVICES</div>
+                    <div class="duration">2024 — 2024</div>
+                    <div class="job-description">
+                        Hands on experience Oracle database retrieving client financial details Using SQL. Retrieve client details Oracle database to make an invoices and collecting payment based on services provided. I have handled Insurance (Life, Medical, Auto, Pets) based client in HTC Global service. Handling vendor query with Oracle database to find the vendor's pending payment in over-dues and send details to concern vendor. Vendor payment reconciliation exporting data's from database based on vendor records. Monitoring collected payment receipts with export details and update in database. Visualization of aging report (Overdue Payments, Pending invoices, collected payments matching with vendor wise) Tools using Power BI, Tableau, Excel Create, Modify, Insert vendor details in Oracle database using SQL. Posting bulk GL entries for day to day activities using Advance SQL Query.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="company">PROFESSIONAL EXPERIENCE</div>
+                    <div class="duration">2023 — 2023</div>
+                    <div class="job-description">
+                        Assigned tasks to individuals and departments. Monitored progress within each individual toward goal attainment, utilizing measurable data in spread sheet applications. Identified operational issues and devised goals and plans to address them. Giving process training to the new employees. Making and Modifying SOP in accordance with the process.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-section">
+            <div class="skills-title">
+                <h1>My Skills</h1>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-name">Web Design</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-percentage">76%</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="76%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">Web Design</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-percentage">76%</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="76%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">Web Design</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-percentage">76%</div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="76%"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+</section>
+
+    <!-- PORTFOLIO PAGE -->
+<section id="portfolio" class="page-section">
+  <h1 class="section-header">Portfolio</h1>
+
+  <div class="portfolio-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web">Web Design</button>
+    <button class="filter-btn" data-filter="mobile">App Design</button>
+    <button class="filter-btn" data-filter="branding">Web Developement</button>
+  </div>
+
+  <!-- Static Portfolio Grid -->
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item" data-category="web">
+      <div class="portfolio-image">
+        <img src="assets/portfolio.png" alt="Business websites">
       </div>
-
-      <div class="service-card">
-        <div class="icon-title-row">
-          <img src="assets/code.png" alt="Web Development Icon" class="service-icon" />
-          <h3>Web Development</h3>
-        </div>
-        <p class="service-description">
-          High-quality development of sites at the professional level.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="icon-title-row">
-          <img src="assets/app-development.png" alt="Mobile App Icon" class="service-icon" />
-          <h3>Mobile Apps</h3>
-        </div>
-        <p class="service-description">
-          Professional development of applications for iOS and Android.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="icon-title-row">
-          <img src="assets/consulting.png" alt="Consulting Icon" class="service-icon" />
-          <h3>Consulting Services</h3>
-        </div>
-        <p class="service-description">
-          Guiding startups and businesses to achieve operational excellence and IT efficiency.
-        </p>
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Business websites</h3>
+        <p class="portfolio-category">Web Developement</p>
       </div>
     </div>
 
-    <div class="services-scroll-indicator" id="servicesScrollIndicator">
-      <div class="services-scroll-thumb" id="servicesScrollThumb"></div>
+    <div class="portfolio-item" data-category="web">
+      <div class="portfolio-image">
+        <img src="assets/portfolio.png" alt="Business websites">
+      </div>
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Business websites</h3>
+        <p class="portfolio-category">Web Developement</p>
+      </div>
     </div>
+
+    <div class="portfolio-item" data-category="web">
+      <div class="portfolio-image">
+        <img src="assets/portfolio.png" alt="Business websites">
+      </div>
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Business websites</h3>
+        <p class="portfolio-category">Web Developement</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-category="web">
+      <div class="portfolio-image">
+        <img src="assets/portfolio.png" alt="Business websites">
+      </div>
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Business websites</h3>
+        <p class="portfolio-category">Web Developement</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-category="web">
+      <div class="portfolio-image">
+        <img src="assets/portfolio.png" alt="Business websites">
+      </div>
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Business websites</h3>
+        <p class="portfolio-category">Web Developement</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item"data-category="web">
+      <div class="portfolio-image">
+        <img src="assets/portfolio.png" alt="Business websites">
+      </div>
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Business websites</h3>
+        <p class="portfolio-category">Web Developement</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item"data-category="web">
+      <div class="portfolio-image">
+        <img src="assets/portfolio.png" alt="Business websites">
+      </div>
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Business websites</h3>
+        <p class="portfolio-category">Web Developement</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item"data-category="web">
+      <div class="portfolio-image">
+        <img src="assets/portfolio.png" alt="Business websites">
+      </div>
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Business websites</h3>
+        <p class="portfolio-category">Web Developement</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item"data-category="web">
+      <div class="portfolio-image">
+        <img src="assets/portfolio.png" alt="Business websites">
+      </div>
+      <div class="portfolio-content">
+        <h3 class="portfolio-title">Business websites</h3>
+        <p class="portfolio-category">Web Developement</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- BLOG PAGE -->
+<section id="blog" class="page-section">
+  <h1 class="section-header">Blog</h1>
+
+  <div class="blog-grid">
+
+    <div class="blog-item">
+      <div class="blog-image">
+        <img src="assets/blog.png" alt="Design Blog">
+      </div>
+      <div class="blog-content">
+        <p class="blog-date">Design Feb 23, 2025</p>
+        <h3 class="blog-title">Design Conferences in 2022</h3>
+        <p class="blog-desc">Highlights from the 2023 Design Conference: Trends, Insights & Innovations</p>
+      </div>
+    </div>
+
+    <div class="blog-item">
+      <div class="blog-image">
+        <img src="assets/blog.png" alt="UI/UX Blog">
+      </div>
+      <div class="blog-content">
+        <p class="blog-date">Design Feb 23, 2025</p>
+        <h3 class="blog-title">Design Conferences in 2022</h3>
+        <p class="blog-desc">Highlights from the 2023 Design Conference: Trends, Insights & Innovations</p>
+      </div>
+    </div>
+
+    <div class="blog-item">
+      <div class="blog-image">
+        <img src="assets/blog.png" alt="Web Development Blog">
+      </div>
+      <div class="blog-content">
+        <p class="blog-date">Design Feb 23, 2025</p>
+        <h3 class="blog-title">Design Conferences in 2022</h3>
+        <p class="blog-desc">Highlights from the 2023 Design Conference: Trends, Insights & Innovations</p>
+      </div>
+    </div>
+
+    <div class="blog-item">
+      <div class="blog-image">
+        <img src="assets/blog.png" alt="Web Development Blog">
+      </div>
+      <div class="blog-content">
+        <p class="blog-date">Design Feb 23, 2025</p>
+        <h3 class="blog-title">Design Conferences in 2022</h3>
+        <p class="blog-desc">Highlights from the 2023 Design Conference: Trends, Insights & Innovations</p>
+      </div>
+    </div>
+
+    <div class="blog-item">
+      <div class="blog-image">
+        <img src="assets/blog.png" alt="Web Development Blog">
+      </div>
+      <div class="blog-content">
+        <p class="blog-date">Design Feb 23, 2025</p>
+        <h3 class="blog-title">Design Conferences in 2022</h3>
+        <p class="blog-desc">Highlights from the 2023 Design Conference: Trends, Insights & Innovations</p>
+      </div>
+    </div>
+
+    <div class="blog-item">
+      <div class="blog-image">
+        <img src="assets/blog.png" alt="Web Development Blog">
+      </div>
+      <div class="blog-content">
+        <p class="blog-date">Design Feb 23, 2025</p>
+        <h3 class="blog-title">Design Conferences in 2022</h3>
+        <p class="blog-desc">Highlights from the 2023 Design Conference: Trends, Insights & Innovations</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
 
-    <section class="testimonials">
-      <h2>Testimonials</h2>
-      <div class="testimonials-scroll-container">
-        <div class="testimonial-container" id="testimonialsContainer">
-  
-          <div class="testimonial-item">
-            <div class="name-badge">
-              <h3>Hari Krishnan</h3>
-              <p>Developer</p>
-            </div>
-            <div class="avatar">
-              <img src="assets/profile.png.png" alt="Hari Krishnan" />
-            </div>
-            <div class="testimonial-content">
-              <div class="stars">★★★★★</div>
-              <p class="feedback">
-                Magesh Kumar was brought on board to develop our corporate identity, and we couldn't be happier with the outcome. He has extensive experience and is always attentive to the client's needs, ensuring everything aligns perfectly with our vision.
-              </p>
-            </div>
-          </div>
 
-          <div class="testimonial-item">
-            <div class="name-badge">
-              <h3>Hari Krishnan</h3>
-              <p>Developer</p>
-            </div>
-            <div class="avatar">
-              <img src="assets/profile.png.png" alt="Hari Krishnan" />
-            </div>
-            <div class="testimonial-content">
-              <div class="stars">★★★★★</div>
-              <p class="feedback">
-                Magesh Kumar was brought on board to develop our corporate identity, and we couldn't be happier with the outcome. He has extensive experience and is always attentive to the client's needs, ensuring everything aligns perfectly with our vision.
-              </p>
-            </div>
-          </div>
-
-          <div class="testimonial-item">
-            <div class="name-badge">
-              <h3>Hari Krishnan</h3>
-              <p>Developer</p>
-            </div>
-            <div class="avatar">
-              <img src="assets/profile.png.png" alt="Hari Krishnan" />
-            </div>
-            <div class="testimonial-content">
-              <div class="stars">★★★★★</div>
-              <p class="feedback">
-                Magesh Kumar was brought on board to develop our corporate identity, and we couldn't be happier with the outcome. He has extensive experience and is always attentive to the client's needs, ensuring everything aligns perfectly with our vision.
-              </p>
-            </div>
-          </div>
-
-          <div class="testimonial-item">
-            <div class="name-badge">
-              <h3>Hari Krishnan</h3>
-              <p>Developer</p>
-            </div>
-            <div class="avatar">
-              <img src="assets/profile.png.png" alt="Hari Krishnan" />
-            </div>
-            <div class="testimonial-content">
-              <div class="stars">★★★★★</div>
-              <p class="feedback">
-                Magesh Kumar was brought on board to develop our corporate identity, and we couldn't be happier with the outcome. He has extensive experience and is always attentive to the client's needs, ensuring everything aligns perfectly with our vision.
-              </p>
-            </div>
-          </div>
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="page-section">
+      <h1 class="section-header">Contact Us</h1>
+      <form class="contact-form" onsubmit="sendMessage(event)">
+        <div class="form-row">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
         </div>
-        <div class="testimonials-scroll-indicator" id="testimonialsScrollIndicator">
-        <div class="testimonials-scroll-thumb" id="testimonialsScrollThumb"></div>
+        <div class="form-row">
+          <input type="text" id="mobile" placeholder="Mobile Number" />
+          <input type="text" id="subject" placeholder="Subject" />
         </div>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+      <div class="map-container">
+        <img src="assets/map.png" alt="Map">
       </div>
     </section>
 
   </main>
 </div>
+
 </body>
 </html>

@@ -297,44 +297,46 @@
             </div>
         </div>
 
-        <div class="skills-section">
-            <div class="skills-title">
-                <h1>My Skills</h1>
+         <div class="skills-section">
+        <div class="skills-title">
+            <h1>My Skills</h1>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-name">Web Design</div>
+                <div class="skill-bar-container">
+                    <div class="skill-percentage" data-percentage="76%">76%</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="76%"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-name">Web Design</div>
-                    <div class="skill-bar-container">
-                        <div class="skill-percentage">76%</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="76%"></div>
-                        </div>
+            <div class="skill-item">
+                <div class="skill-name">Web Design</div>
+                <div class="skill-bar-container">
+                    <div class="skill-percentage" data-percentage="76%">76%</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="76%"></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="skill-item">
-                    <div class="skill-name">Web Design</div>
-                    <div class="skill-bar-container">
-                        <div class="skill-percentage">76%</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="76%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <div class="skill-name">Web Design</div>
-                    <div class="skill-bar-container">
-                        <div class="skill-percentage">76%</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="76%"></div>
-                        </div>
+            <div class="skill-item">
+                <div class="skill-name">Web Design</div>
+                <div class="skill-bar-container">
+                    <div class="skill-percentage" data-percentage="76%">76%</div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="76%"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </section>
+
+
 <section id="portfolio" class="page-section">
   <h1 class="section-header">Portfolio</h1>
 
@@ -513,21 +515,23 @@
 
   </div>
 </section>
-    
+
+
     <section id="contact" class="page-section">
       <h1 class="section-header">Contact Us</h1>
-      <form class="contact-form" onsubmit="sendMessage(event)">
-        <div class="form-row">
-          <input type="text" id="name" placeholder="Your Name" required />
-          <input type="email" id="email" placeholder="Your Email" required />
-        </div>
-        <div class="form-row">
-          <input type="text" id="mobile" placeholder="Mobile Number" />
-          <input type="text" id="subject" placeholder="Subject" />
-        </div>
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="send-btn">Send Message</button>
-      </form>
+     <form class="contact-form" onsubmit="return sendMessage(event)">
+  <div class="form-row">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Your Email" required />
+  </div>
+  <div class="form-row">
+    <input type="text" id="mobile" placeholder="Mobile Number" />
+    <input type="text" id="subject" placeholder="Subject" />
+  </div>
+  <textarea id="message" placeholder="Your Message" required></textarea>
+  <button type="submit" class="send-btn">Send</button>
+</form>
+
       <div class="map-container">
         <img src="assets/map.png" alt="Map">
       </div>

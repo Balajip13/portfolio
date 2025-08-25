@@ -52,18 +52,47 @@ function sendMessage(event) {
 }
 
 function animateSkillBars() {
-  document.querySelectorAll('.skill-fill').forEach((fill, index) => {
+  const skillFills = document.querySelectorAll('.skill-fill');
+  const skillPercentages = document.querySelectorAll('.skill-percentage');
+
+  skillFills.forEach(fill => {
+    fill.style.width = '0%';
+    fill.classList.remove('animate');
+  });
+  
+  skillPercentages.forEach(percentage => {
+    percentage.classList.remove('show');
+    percentage.style.right = '0px';
+  });
+
+  skillFills.forEach((fill, index) => {
     const width = fill.dataset.width;
+    const percentage = skillPercentages[index];
+
     setTimeout(() => {
+
       fill.style.width = width;
-    }, index * 300);
+      fill.classList.add('animate');
+      
+      setTimeout(() => {
+        if (percentage) {
+          percentage.classList.add('show');
+          
+          const percentageValue = parseInt(width);
+          const barContainer = fill.parentElement;
+          const barWidth = barContainer.offsetWidth;
+          const rightPosition = Math.max(0, barWidth - (barWidth * percentageValue / 100) - 8);
+          percentage.style.right = rightPosition + 'px';
+        }
+      }, 1500); 
+    }, index * 300); 
   });
 }
 
 window.addEventListener('load', () => {
   const resumeSection = document.getElementById('resume');
   if (resumeSection && resumeSection.classList.contains('active')) {
-    animateSkillBars();
+    setTimeout(() => animateSkillBars(), 500);
   }
 });
 
@@ -167,7 +196,40 @@ function setupCustomScrollbar(containerId, barId, thumbId) {
   initScrollbar();
 }
 
+function resetSkillBars() {
+  document.querySelectorAll('.skill-fill').forEach(fill => {
+    fill.style.width = '0%';
+    fill.classList.remove('animate');
+  });
+  
+  document.querySelectorAll('.skill-percentage').forEach(percentage => {
+    percentage.classList.remove('show');
+    percentage.style.right = '0px';
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   setupCustomScrollbar("servicesGrid", "servicesScrollIndicator", "servicesScrollThumb");
   setupCustomScrollbar("testimonialsContainer", "testimonialsScrollIndicator", "testimonialsScrollThumb");
+  
+  if ('IntersectionObserver' in window) {
+    const skillsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.target.id === 'resume') {
+          const skillsSection = entry.target.querySelector('.skills-section');
+          if (skillsSection && !skillsSection.dataset.animated) {
+            setTimeout(() => animateSkillBars(), 300);
+            skillsSection.dataset.animated = 'true';
+          }
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    const resumeSection = document.getElementById('resume');
+    if (resumeSection) {
+      skillsObserver.observe(resumeSection);
+    }
+  }
 });

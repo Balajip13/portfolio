@@ -949,12 +949,14 @@ body {
             line-height: 1.6;
         }
 
-        .skills-section {
-            margin-bottom: 0;
+        
+.skills-section {
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .skills-title {
-            margin-bottom: 50px; 
+            margin-bottom: 50px;
         }
 
         .skills-title h1 {
@@ -979,7 +981,7 @@ body {
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             width: 100%;
             margin-top: 20px;
@@ -1003,7 +1005,7 @@ body {
             font-size: 14px;
             font-weight: 600;
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
         }
 
         .skill-bar-container {
@@ -1013,56 +1015,101 @@ body {
 
         .skill-percentage {
             position: absolute;
-            top: -25px;
+            top: -40px;
             right: 0;
             font-size: 12px;
-            color: #333;
-            font-weight: 600;
+            color: black;
+            font-weight: 400;
             background: white;
-            padding: 2px 6px;
-            border-radius: 4px;
-            border: 1px solid #d1e3f7;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 4px 9px;
+            border-radius: 6px;
+            border: 2px solid #2f57ef;
+            box-shadow: 0 2px 2px rgba(47, 87, 239, 0.2);
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.5s ease;
+            z-index: 10;
+        }
+
+        .skill-percentage.show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .skill-bar {
             width: 100%;
-            height: 4px;
+            height: 6px;
             background: #d1e3f7;
-            border-radius: 2px;
+            border-radius: 3px;
             overflow: visible;
             position: relative;
         }
-.skill-fill::after {
-  content: "";
-  position: absolute;
-  right: -6px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 12px;
-  background: white;
-  border: 2px solid #2f57ef;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
 
-.skill-fill.animate::after {
-  opacity: 1;
-}
         .skill-fill {
             height: 100%;
-            background: #2f57ef;
-            border-radius: 2px;
+            background: linear-gradient(90deg, #2f57ef, #4a70ff);
+            border-radius: 3px;
             transition: width 2s ease-in-out;
             position: relative;
             width: 0%;
         }
 
-        .skill-fill[data-width="76%"] {
-            animation: fillBar 2s ease-in-out forwards;
-            animation-delay: 0.5s;
+        .skill-fill::after {
+            content: "";
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background: white;
+            border: 2px solid #2f57ef;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.5s ease;
+            box-shadow: 0 2px 8px rgba(47, 87, 239, 0.3);
+        }
+
+        .skill-fill.animate::after {
+            opacity: 1;
+            transform: translateY(-50%) scale(1);
+        }
+
+        .skill-fill.animate {
+            box-shadow: 0 0 10px rgba(47, 87, 239, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .skill-item {
+                padding: 15px;
+            }
+
+            .skills-title h1 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-title h1::after {
+                left: 0;
+                width: 40px;
+            }
+
+            .skill-percentage {
+                font-size: 11px;
+                padding: 3px 6px;
+            }
+
+            .skill-fill::after {
+                width: 14px;
+                height: 14px;
+                right: -7px;
+            }
         }
         
 @media (max-width: 768px) {
